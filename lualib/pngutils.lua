@@ -1,7 +1,8 @@
 local ex = require('jm_generic_extend')
 local reverse_split = ex.string.reverse_split
 local config = {
-    md_css_path = 'resource/pngutils/md.css'
+    md_css_path = 'resource/pngutils/md.css',
+    html2png_cmd = 'html2png %s.html %s.html.png'
 }
 local T = {
     config = config,
@@ -15,7 +16,8 @@ function T.html2png(html)
     local tmp = os.tmpname()
     local filename = (tmp .. '.html')
     if not ex.file.write(filename, html) then return '出错了' end
-    cmd = string.format('html2png %s.html %s.html.png', tmp, tmp)
+    --local cmd = string.format('html2png %s.html %s.html.png', tmp, tmp)
+    local cmd = string.format(config.html2png_cmd, tmp, tmp)
     os.execute(cmd)
     os.remove(tmp)
     --os.remove(tmp .. '.html')
