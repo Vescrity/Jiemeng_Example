@@ -46,8 +46,8 @@ static int load_data(lua_State* L)
     char line[MAX_CODE];
     while (fgets(line, sizeof(line), file)) {
         int number;
-        Entry entry={NULL ,NULL /*,NULL*/};
-        if (sscanf(line, "%d %ms %ms", &number, &entry.orig, &entry.cf/*, &entry.code*/) ==/*4 */3) {
+        Entry entry={NULL ,NULL ,NULL};
+        if (sscanf(line, "%d %ms %ms %ms", &number, &entry.orig, &entry.cf, &entry.code) ==4 ) {
             if (number >= 0 && number < MAX_CODE) { 
                 entries[number] = entry;
                 max_entries = (number > max_entries) ? number : max_entries;

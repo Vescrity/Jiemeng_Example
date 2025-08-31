@@ -47,7 +47,7 @@
     },
     {
       "anss": [
-        {"lua_call":"Plug.huma.mapi.huma.charcut"}
+        {"lua_call":"Plug.huma.mapi.charcut"}
       ],
       "pri": 45,
       "regex": {"and":["好的","^.{0,5}$"]}

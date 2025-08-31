@@ -34,12 +34,11 @@ local function md_css(html)
     return html_content
 end
 local function md2html(md)
-    os.execute('rm /tmp/*.html.png')
     local tmp = os.tmpname()
     ex.file.write(tmp, md)
     cmd = string.format('markdown -f image -f toc -f fencedcode -f html -f del %s > %s.html', tmp, tmp)
     os.execute(cmd)
-    local html = ex.file.read(tmp .. 'html')
+    local html = ex.file.read(tmp .. '.html')
     html = md_css(html)
     return html
 end

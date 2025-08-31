@@ -8,7 +8,7 @@
           "data":{"call":"random_chat"}
         },
         {
-          "lua_call": "Plug.huma.mapi.huma.charcut",
+          "lua_call": "Plug.huma.mapi.charcut",
           "weight": 2
         },
         {

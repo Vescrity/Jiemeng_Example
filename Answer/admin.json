@@ -95,7 +95,7 @@
             "anss": {
                 "lua_exec": "bot.lua_reload()\nreturn [[开始重置主lua状态]]"
             },
-            "pri": 111,
+            "pri": 111
         },
         {
             "regex": "^重载$",
