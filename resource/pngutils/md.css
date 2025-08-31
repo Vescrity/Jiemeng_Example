@@ -1,0 +1,44 @@
+html {
+    font-family: sans;
+    font-size: 23px;
+    max-width: 1000px;
+}
+body {
+    background-color: #000000;
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    margin: 20px 0;
+}
+th {
+    padding: 16px 12px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    border-bottom: 2px solid #5c9ead;
+    border-top: 2px solid #5c9ead;
+}
+
+/* 表身样式 */
+tbody tr {
+    border-bottom: 1px solid #3d3d3d;
+}
+
+tbody tr:last-child {
+    border-bottom: 2px solid #5c9ead;
+}
+
+td {
+    padding: 14px 12px;
+    color: #cccccc;
+    position: relative;
+}
+

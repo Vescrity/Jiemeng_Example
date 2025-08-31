@@ -1,0 +1,10 @@
+{
+  "Answers": [
+    {
+      "anss": {"order":"1_sh#Daily_Broad()"},
+      "pri": 999,
+      "user": ["10000"],
+      "regex": "^\\[08:00\\]$"
+    }
+  ]
+}

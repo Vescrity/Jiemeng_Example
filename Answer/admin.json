@@ -1,0 +1,115 @@
+{
+    "Answers": [
+        {
+            "regex": "^l#",
+            "anss": {"lua_call": "bot.lua_shell"},
+            "pri": 108,
+            "level":110
+        },
+        {
+            "regex": [
+                "^生效群#","^\\.add_group#"
+            ],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.add_group"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":200
+        },
+        {
+            "regex": ["^失效群#","^\\.del_grp#"],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.del_group"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":200
+        },
+        {
+            "regex": [
+                "^生效用户#","^\\.add_private#"
+            ],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.add_private"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":200
+        },
+        {
+            "regex": [
+                "^失效用户#","^\\.del_private#"
+            ],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.del_private"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":1000
+        },
+        {
+            "regex": ["^添加黑名单#","^\\.add_black#"],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.add_black"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":1000
+        },
+        {
+            "regex": ["^移除黑名单#","^\\.del_black#"],
+            "anss":{
+                "and":[
+                    {"lua_call": "mapi.bot.del_black"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":1000
+        },
+        {
+            "regex": ["^保存配置$","^\\.save_config$"],
+            "anss":{
+                "and":[
+                    {"lua_exec": "bot.save_config()"},
+                    "已执行"
+                ]
+            },
+            "level":100,
+            "pri":1000
+        },
+        {
+            "regex": "^重置$",
+            "level":100,
+            "anss": {
+                "lua_exec": "bot.lua_reload()\nreturn [[开始重置主lua状态]]"
+            },
+            "pri": 111,
+        },
+        {
+            "regex": "^重载$",
+            "anss": {
+                "lua_exec": "bot.deck_reload()\nbot.answer_reload()\nreturn [[重载已完成]]"
+            },
+            "pri": 111,
+            "level":100
+        },
+        {
+            "regex": "^/#",
+            "anss": {"order": "order"},
+            "pri": 110,
+            "level":100
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "Answers": [
+    {
+      "regex": "^\\.luajit#",
+      "anss":[
+        {"lua_call1": "Plug.code_run.mapi.luajit_run"}
+      ],
+      "pri": 105
+    },
+    {
+      "regex": "^\\.lua#",
+      "anss":[
+        {"lua_call1": "Plug.code_run.mapi.lua_run"}
+      ],
+      "pri": 105
+    },
+    {
+      "regex": "^\\.py#",
+      "anss":[
+        {"lua_call1": "Plug.code_run.mapi.py_run"}
+      ],
+      "pri": 105
+    },
+    {
+      "regex": "^\\.sh#",
+      "anss":[
+        {"lua_call1": "Plug.code_run.mapi.wrap_shell"}
+      ],
+      "pri": 105
+    },
+    {
+      "regex": "^\\.cpp#",
+      "anss":[
+        {"lua_call": "Plug.code_run.mapi.cpp_run"}
+      ],
+      "pri": 105
+    }
+  ]
+}

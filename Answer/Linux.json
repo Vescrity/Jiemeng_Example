@@ -1,0 +1,22 @@
+{
+  "Answers": [
+    {
+      "anss": [
+        {
+          "or":[
+            "I use arch btw"
+          ],
+          "weight":3
+        },
+        {
+          "order": "ignore",
+          "weight": 20
+        },
+        {"order":"reRecv#桔梦#Linux"},
+        {"order":"sh#uname -a"}
+      ],
+      "pri": 70,
+      "regex": ["indows","inux","Mac"]
+    }
+  ]
+}

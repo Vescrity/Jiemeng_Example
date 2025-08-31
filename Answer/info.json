@@ -1,0 +1,18 @@
+{
+  "Answers": [
+    {
+      "regex": "^\\.info$",
+      "anss": {
+        "lua_call": "bot.info"
+      },
+      "pri": 100
+    },
+    {
+      "regex": "^\\.status$",
+      "anss": {
+        "lua_exec": "return Plug.status.pretty()"
+      },
+      "pri": 100
+    }
+  ]
+}

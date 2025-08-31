@@ -1,0 +1,13 @@
+{
+  "Answers": [
+    {
+      "anss": [
+        {"text":"[Repeat]","weight":2},
+        {"order":"ignore"}
+      ],
+      "pri": 20,
+      "regex": ["复读"]
+    }
+    
+  ]
+}

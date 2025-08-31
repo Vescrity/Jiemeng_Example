@@ -1,0 +1,45 @@
+{
+  "Answers": [
+    {
+      "anss": [
+        {"order": "ignore","weight":9999},
+        {
+          "state_call":"chat",
+          "data":{"call":"random_chat"}
+        },
+        {
+          "lua_call": "Plug.huma.mapi.huma.charcut",
+          "weight": 2
+        },
+        {
+          "and":[
+            {"order":"draw_deck#_冒泡"},
+            {"order":"clear"},
+            {"order": "ignore"}
+          ]
+        },
+        {
+          "and":[
+            {"sleep": 355555},
+            [
+              {"order":"draw_deck#_延迟冒泡"},
+              {
+                "and":[
+                  "[user_name]",
+                  {"order":"clear"},
+                  {"sleep": 5555},
+                  {"order":"draw_deck#_延迟挽留"}
+                ]
+              }
+            ],
+            {"order":"clear"},
+            {"order": "ignore"}
+          ]
+        }
+      ],
+      "pri": -1,
+      "regex": {"and":[{"not":"JM:"},"^.{0,30}$"]},
+      "user": ["-1","10000"]
+    }
+  ]
+}
