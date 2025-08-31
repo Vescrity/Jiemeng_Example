@@ -38,7 +38,7 @@ local t = {
             anss = {
                 lua_exec = [[
                 return bot.onebot.set_group_name(
-                    msg.group_id,'♪'.._TMP.msg:true_param())
+                    _TMP.msg.group_id,'♪'.._TMP.msg:true_param())
                 ]]
             },
             regex = "^\\.rename#"
