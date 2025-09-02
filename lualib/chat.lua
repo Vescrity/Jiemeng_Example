@@ -87,6 +87,7 @@ function Chat:make_content(roles, str)
     end
     return con
 end
+
 local lfs = require("lfs")
 ---@param session string
 function Chat:save(session)
@@ -222,10 +223,15 @@ function Chat:Chat(session, message_str, model, user_nk, user_id)
             output = response.message.content
             target = self.sessions[session].messages
         else
-            print(jsonlib.table2json(response):dump(2))
-            ---@type string
-            ---@diagnostic disable-next-line
-            output = response.candidates[1].content.parts[1].text
+            print(ex.table2str(response))
+            local content = response.candidates[1].content
+            local out_t = {}
+            for _, part in ipairs(content.parts) do
+                if part and (part.text ~= nil) then
+                    table.insert(out_t, part.text)
+                end
+            end
+            output = table.concat(out_t, '\n')
             target = self.sessions[session].contents
         end
         ---@cast target table

@@ -1,0 +1,27 @@
+{
+  "Answers": [
+    {
+      "anss": {
+        "and": [
+          { "lua_call": "before_all" },
+          {"lua_oper":"return lock_checker(_TMP.msg)"},
+          {"order": "ignore"}
+        ]
+      },
+      "pri": 1000,
+      "regex": ".*"
+    },
+    {
+      "anss": {
+        "and": [
+          { "lua_call": "msg_precheck" },
+          {"order": "clear"},
+          {"order": "ignore"}
+        ]
+      },
+      "pri": 0,
+      "regex": ".*"
+    }
+
+  ]
+}

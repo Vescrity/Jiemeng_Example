@@ -21,7 +21,8 @@ Plug                           = {
     code_run = require("code_run"),
     like     = require("like"),
     test     = require("test"),
-    bottle   = require("bottle")
+    bottle   = require("bottle"),
+    chess    = require("chess"),
 }
 Plug.bottle.config.bottle_file = 'tmp/bottles.lua'
 mapi.t2img                     = Plug.t2img.mapi.t2img

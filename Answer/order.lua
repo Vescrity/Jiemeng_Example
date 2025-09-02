@@ -146,7 +146,7 @@ local t = {
             ["anss"] = {
                 lua_exec = [[
                     return bot.string_only(
-                        bot.os_sh(msg:true_param()))
+                        bot.os_sh(_TMP.msg:true_param()))
                 ]]
             },
             regex = "^\\!sh#"

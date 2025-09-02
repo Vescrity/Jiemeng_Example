@@ -20,6 +20,14 @@ local t = {
             regex = "^发电#"
         },
         {
+            pri = 88.0,
+            anss = {
+                lua_exec = [[return Plug.chess.main(
+                    _TMP.msg.user_id, _TMP.msg:true_param())]]
+            },
+            regex = "^\\.chess#"
+        },
+        {
             pri = 188.0,
             anss = {
                 lua_call = "Plug.like.mapi.like"
