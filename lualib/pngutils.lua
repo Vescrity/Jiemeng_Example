@@ -40,6 +40,7 @@ local function md2html(md)
     ex.file.write(tmp, md)
     cmd = string.format('markdown -f image -f toc -f fencedcode -f html -f del %s > %s.html', tmp, tmp)
     os.execute(cmd)
+    os.remove(tmp)
     local html = ex.file.read(tmp .. '.html')
     html = md_css(html)
     return html
